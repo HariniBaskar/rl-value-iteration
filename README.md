@@ -84,14 +84,14 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
 ```
 ## OUTPUT:
 ### Optimal Policy:
-
+![](https://github.com/HariniBaskar/rl-value-iteration/blob/main/4a.png)
 
 ### Optimal Value Function:
 
-
+![](https://github.com/HariniBaskar/rl-value-iteration/blob/main/4b.png)
 ### Success Rate for Optimal Policy:
 
-
+![](https://github.com/HariniBaskar/rl-value-iteration/blob/main/4c.png)
 
 ## RESULT:
 
