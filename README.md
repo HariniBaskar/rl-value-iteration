@@ -1,5 +1,9 @@
 # VALUE ITERATION ALGORITHM
 
+## NAME: HARINI B.
+## REGISTER NUMBER: 212221230035
+## DEPARTMENT: ARTIFICIAL INTELLIGENCE AND DATA SCIENCE
+
 ## AIM
 To develop a Python program to find the optimal policy for the given MDP using the value iteration algorithm.
 
@@ -65,8 +69,15 @@ The algorithm is as follows:
 5. Return the optimal policy and the optimal value function.
 
 ## VALUE ITERATION FUNCTION
+
 ```
-python
+import gym
+desc=['SFFF','FFHF','HFFF','GFFF']
+env = gym.make('FrozenLake-v1',desc=desc)
+init_state = env.reset()
+goal_state = 12
+P = env.env.P
+
 def value_iteration(P, gamma=1.0, theta=1e-10):
     V = np.zeros(len(P), dtype=np.float64)
     while True:
@@ -80,19 +91,19 @@ def value_iteration(P, gamma=1.0, theta=1e-10):
       V=np.max(Q,axis=1)
     pi=lambda s:{s:a for s , a in enumerate(np.argmax(Q,axis=1))}[s]
     return V, pi
-
 ```
 ## OUTPUT:
 ### Optimal Policy:
-![](https://github.com/HariniBaskar/rl-value-iteration/blob/main/4a.png)
+![OUTPUT1](https://github.com/HariniBaskar/rl-value-iteration/assets/93427253/02328edb-b6a8-4730-80f9-204ef2468ef7)
+
 
 ### Optimal Value Function:
+![OUTPUT3](https://github.com/HariniBaskar/rl-value-iteration/assets/93427253/6657200a-a060-4630-8394-0148438fc753)
 
-![](https://github.com/HariniBaskar/rl-value-iteration/blob/main/4b.png)
+
 ### Success Rate for Optimal Policy:
+![OUTPUT2](https://github.com/HariniBaskar/rl-value-iteration/assets/93427253/987e35ac-380c-45fe-808f-80ac73c74946)
 
-![](https://github.com/HariniBaskar/rl-value-iteration/blob/main/4c.png)
 
 ## RESULT:
-
 Thus, a Python program is developed to find the optimal policy for the given MDP using the value iteration algorithm.
